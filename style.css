@@ -1,3 +1,9 @@
+:root{
+    --color-pri:#68bd44;
+    --color-sec:#2e2e2e;
+    --color-ter:#8b8e8c;
+    --boton-padding:20px 40px;
+}
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -12,13 +18,13 @@ a{
     padding:80px 20px
 }
 
-/* Styles para el menu de navagacion */
+/* Styles para el menu el header */
 
 .menuNav{
     position: fixed;
     width: 100%;
     top:0;
-    
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.4);
     z-index: 10;
     background-color: #fff;
 }
@@ -28,11 +34,7 @@ a{
     display: flex;
     justify-content: space-between;
     height: 60px;
-    padding:0 10px 0 20px
-    
-}
-.header{
-    /* margin-top: 60px; */
+    padding:0 10px 0 20px; 
 }
 .logo{
     width: 50px;
@@ -51,7 +53,7 @@ a{
 .navList__item{
     padding: 10px 20px;
     list-style-type: none;
-    color: #2e2e2e;
+    color: var(--color-sec);
     font-weight:500;
     margin: 0 10px;
     text-align: center;
@@ -67,7 +69,7 @@ a{
     content: "";
     height: 3px;
     width: 0px;
-    background-color: #68bd44;
+    background-color: var(--color-pri);
     display: block;
     margin:auto;
 }
@@ -76,8 +78,6 @@ a{
     width: 100%;
     transition: width 0.2s linear;
 }
-
-
 .hero.container{
     padding: 0;
     max-width: inherit;
@@ -107,7 +107,7 @@ a{
     content: "";
     display: block;
     height: 3px;
-    background-color: rgb(104, 189, 68);
+    background-color: var(--color-pri);
     width: 250px;
     margin:auto
 }
@@ -127,4 +127,47 @@ a{
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 5px 5px rgb(104, 189, 68, 0.5);
+}
+
+/* Estilos para el about */
+.about.container{
+    margin-top:80px;
+}
+.aboutTitle{
+    margin-bottom:20px;
+    font-size:2.5rem;
+    color:var(--color-pri);
+}
+.aboutContent{
+    width:100%;
+    display:flex;
+}
+.aboutFigure{
+    width: 35%;
+    text-align: center;
+
+}
+.aboutImg{
+    width: 90%;
+    border-radius: 10px;
+}
+.aboutText{
+    width: 65%;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.aboutText__title{
+    text-align: center;
+    color:var(--color-sec);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.aboutText__paragraph{
+    color:var(--color-sec);
+    line-height: 2rem;
+    letter-spacing: .02rem;
+    text-align:justify;
 }
