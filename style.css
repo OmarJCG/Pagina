@@ -1,0 +1,130 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.container{
+    max-width: 1200px;
+    width: 95%;
+    margin:0 auto;
+    padding:80px 20px
+}
+
+/* Styles para el menu de navagacion */
+
+.menuNav{
+    position: fixed;
+    width: 100%;
+    top:0;
+    
+    z-index: 10;
+    background-color: #fff;
+}
+.nav{
+    max-width: 1220px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding:0 10px 0 20px
+    
+}
+.header{
+    /* margin-top: 60px; */
+}
+.logo{
+    width: 50px;
+   display: flex;
+   align-items: center;
+}
+.logo__img{
+    border-radius: 50%;
+    object-fit: cover;
+}
+.navList{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navList__item{
+    padding: 10px 20px;
+    list-style-type: none;
+    color: #2e2e2e;
+    font-weight:500;
+    margin: 0 10px;
+    text-align: center;
+    width: 140px;
+
+
+}
+.navList__item-a{
+    line-height: 1.5;
+    
+}
+.navList__item-a::after{
+    content: "";
+    height: 3px;
+    width: 0px;
+    background-color: #68bd44;
+    display: block;
+    margin:auto;
+}
+
+.navList__item-a:hover::after{
+    width: 100%;
+    transition: width 0.2s linear;
+}
+
+
+.hero.container{
+    padding: 0;
+    max-width: inherit;
+}
+.hero{
+    margin-top:60px;
+    background:linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4) ) ,url("/img/pareja.webp") no-repeat  fixed;
+    background-position: center 60px;   
+    width: 100%;
+    height:500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.heroText{
+    width: 70%;
+    text-align: center;
+    color:#fff;
+}
+.title{
+    font-size:3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.title::after{
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: rgb(104, 189, 68);
+    width: 250px;
+    margin:auto
+}
+
+.heroText__subtitle{
+    margin-top:15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.heroFigure{
+    position: absolute;
+    bottom: -85px;
+}
+.heroImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 5px 5px rgb(104, 189, 68, 0.5);
+}
