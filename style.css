@@ -2,7 +2,7 @@
 :root{
     --color-pri:#68bd44;
     --color-sec:#2e2e2e;
-    --color-ter:#8b8e8c;
+    --color-ter:#6d6b6b;
 }
 html{
     scroll-behavior: smooth;
@@ -143,7 +143,10 @@ a{
 }
 
 /* Estilos para el about */
-.aboutTitle{
+.about.container{
+    padding: 100px 20px 20px;
+}
+.titles{
     margin-bottom:40px;
     font-size:2.5rem;
     color:var(--color-pri);
@@ -186,8 +189,98 @@ a{
     font-weight: 500;
 }
 .aboutText__paragraph{
-    color:var(--color-sec);
+    color:var(--color-ter);
     line-height: 1.5rem;
     letter-spacing: .02rem;
     text-align:justify;
+}
+
+/* Estiles para la tersera seciton "boys" */
+
+.titleBoys{
+    text-align: center;
+}
+.boysContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+.boysContent__item{
+    margin-bottom: 20px;
+    max-width: 350px; 
+    box-shadow: 0 0 10px 4px rgba(0,0,0,0.4);
+    border-radius: 5px;
+}
+.boysImg{
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+.boysData{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.boysData__item{
+    margin-bottom: 8px;
+    color:var(--color-ter);
+}
+.data{
+    text-transform: uppercase;
+    color:var(--color-sec);
+    letter-spacing: 1px;
+    text-align: center;
+}
+.data__weight{
+    font-weight:500;
+}
+.data__weight>span{
+    font-weight:300;
+}
+.social{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social__item{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    border:1px solid var(--color-ter)
+}
+.bx{
+    font-size: 25px;
+    line-height: 30px;
+    color:var(--color-ter)
+}
+.social__item:hover{
+    border:1px solid var(--color-pri)
+}
+.bx:hover{
+    color:var(--color-pri)
+}
+.bottom{
+    width: 290px;
+    height: 50px;
+    margin: 10px auto 0;
+    border: 2px solid var(--color-pri);
+    color:var(--color-pri);
+    border-radius: 10px;
+    text-align: center;
+}
+.bottom__item{
+    line-height: 50px;
+    font-size: 17.5px;
+    font-weight: 600;
+    color: inherit;
+    letter-spacing: 1px;  
+}
+.bottom:hover{
+    background-color: var(--color-pri);
+    color:#fff;
 }
