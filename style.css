@@ -30,6 +30,7 @@ a{
     box-shadow: 0 0 10px 1px rgba(0,0,0,0.4);
     z-index: 10;
     background-color: #fff;
+    transition: top 0.5s;
 }
 .nav{
     max-width: 1220px;
@@ -40,13 +41,17 @@ a{
     padding:0 10px; 
 }
 .logo{
-    width: 50px;
    display: flex;
    align-items: center;
+   width:75px;
 }
 .logo__img{
     border-radius: 50%;
     object-fit: cover;
+}
+.logo__subtitle{
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 .navList{
     display: flex;
@@ -194,6 +199,11 @@ a{
     letter-spacing: .02rem;
     text-align:justify;
 }
+.o{
+    color:red;
+    text-align: center;
+    margin-top:10px;
+}
 
 /* Estiles para la tersera seciton "boys" */
 
@@ -214,18 +224,19 @@ a{
 }
 .boysImg{
     width: 350px;
-    height: 450px;
+    height: 350px;
     object-fit: cover;
+    object-position: center top;
     border-radius: 5px 5px 0 0;
 }
 .boysData{
-    padding: 20px;
+    padding: 10px 20px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .boysData__item{
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     color:var(--color-ter);
 }
 .data{
@@ -234,38 +245,8 @@ a{
     letter-spacing: 1px;
     text-align: center;
 }
-.data__weight{
-    font-weight:500;
-}
-.data__weight>span{
-    font-weight:300;
-}
-.social{
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-evenly;
-}
-.social__item{
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border-radius: 50%;
-    border:1px solid var(--color-ter)
-}
-.bx{
-    font-size: 25px;
-    line-height: 30px;
-    color:var(--color-ter)
-}
-.social__item:hover{
-    border:1px solid var(--color-pri)
-}
-.bx:hover{
-    color:var(--color-pri)
-}
 .bottom{
-    width: 290px;
+    width: 250px;
     height: 50px;
     margin: 10px auto 0;
     border: 2px solid var(--color-pri);
@@ -274,13 +255,23 @@ a{
     text-align: center;
 }
 .bottom__item{
+    display: block;
+    width: 100%;
     line-height: 50px;
-    font-size: 17.5px;
     font-weight: 600;
     color: inherit;
-    letter-spacing: 1px;  
+    letter-spacing: 1px; 
+    font-size:18px; 
 }
 .bottom:hover{
     background-color: var(--color-pri);
     color:#fff;
+}
+
+/* Aciendo estilos par el footer */
+.footer{
+    background-color:#e9e6e6f2;
+}
+.footer__text{
+    text-align: center;
 }
