@@ -229,6 +229,54 @@ a{
     object-position: center top;
     border-radius: 5px 5px 0 0;
 }
+.container-slider{
+    width: 350px;
+    height: 350px;  
+    overflow: hidden;
+    position: relative;
+}
+
+.slider{
+    width: 400%;
+    display: flex; 
+    margin-left: -100%;
+}
+.slider__item{
+    width: 350px;
+    height: 350px;
+   
+}
+.slider__item-img{
+    display: block;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 5px 5px 0 0;
+}
+.slider-btn {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width:40px;
+    height: 40px;
+    font-size: 40px;
+    background-color: rgb(255,255,255,.3);
+    color:var(--color-sec);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.slider-btn:hover{
+    background-color:rgb(255,255,255,.6); ;
+}
+.slider-btn-left{
+    left: 10px;
+}
+.slider-btn-right{
+    right: 10px;
+}
 .boysData{
     padding: 10px 20px; 
     display: flex;
