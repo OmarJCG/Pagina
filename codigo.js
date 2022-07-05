@@ -4,7 +4,6 @@ const sliderItem = document.querySelectorAll(".slider__item-1");
 let sliderItemLast = sliderItem[sliderItem.length-1];
 const sliderBtnRight = document.querySelector(".slider-btn-right-1");
 const sliderBtnLeft = document.querySelector(".slider-btn-left-1");
-console.log(slider)
 slider.insertAdjacentElement("afterbegin",sliderItemLast);
 
 const next =()=>{
@@ -41,7 +40,6 @@ const sliderItemTwo = document.querySelectorAll(".slider__item-2");
 let sliderItemLastTwo = sliderItemTwo[sliderItemTwo.length-1];
 const sliderBtnRightTwo = document.querySelector(".slider-btn-right-2");
 const sliderBtnLeftTwo = document.querySelector(".slider-btn-left-2");
-console.log(slider)
 sliderTwo.insertAdjacentElement("afterbegin",sliderItemLastTwo);
 
 const nextTwo =()=>{
@@ -78,7 +76,6 @@ const sliderItemTri = document.querySelectorAll(".slider__item-3");
 let sliderItemLastTri = sliderItemTri[sliderItemTri.length-1];
 const sliderBtnRightTri = document.querySelector(".slider-btn-right-3");
 const sliderBtnLeftTri = document.querySelector(".slider-btn-left-3");
-console.log(slider)
 sliderTri.insertAdjacentElement("afterbegin",sliderItemLastTri);
 
 const nextTri =()=>{
@@ -108,4 +105,40 @@ sliderBtnRightTri.addEventListener("click",()=>{
 sliderBtnLeftTri.addEventListener("click",()=>{
     prevTri();
 });
+
+// MENU DE NAVEGACION      
+
+const menu = document.querySelector(".menu");
+const barraMenu = document.querySelector(".menuBarra");
+const menuEnlaces = document.querySelector(".navList");
+const logo = document.querySelector(".title");
+let abierto = false;
+
+const openCloced = ()=>{
+    menuEnlaces.classList.toggle("navListJs");
+    menuEnlaces.style.transition= "clip-path 0.5s ";
+}
+
+menu.addEventListener("click",()=>{
+    openCloced();
+    if(document.querySelector(".navList.navListJs")){
+        abierto=true;
+    }else{
+        abierto=false;
+    }
+});
+menuEnlaces.addEventListener("click",()=>{
+    openCloced();
+    abierto=false
+})
+
+window.addEventListener("click",(e)=>{
+    if(abierto){
+        if(e.target!==barraMenu){
+            openCloced();
+            abierto=false
+        }
+    }
+
+})
 

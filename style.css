@@ -22,7 +22,6 @@ a{
 }
 
 /* Styles para el menu el header */
-
 .menuNav{
     position: fixed;
     width: 100%;
@@ -37,8 +36,16 @@ a{
     margin:0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 60px;
     padding:0 10px; 
+}
+.menu{
+    display: none;
+    margin-right: 20px;
+}
+.menuBarra{
+    font-size: 40px;
 }
 .logo{
    display: flex;
@@ -171,9 +178,10 @@ a{
     margin-top:35px;
 }
 .aboutFigure{
-    width: 35%;
+    width: 340px;
+    margin: auto;
     text-align: center;
-    min-width: 315px;
+    
 }
 .aboutImg{
     width: 90%;
@@ -200,6 +208,7 @@ a{
     text-align:justify;
 }
 .o{
+    display: block;
     color:red;
     text-align: center;
     margin-top:10px;
@@ -214,7 +223,7 @@ a{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* align-items: center; */
+    align-items: center;
 }
 .boysContent__item{
     margin-bottom: 20px;
@@ -322,4 +331,152 @@ a{
 }
 .footer__text{
     text-align: center;
+}
+
+@media screen and (max-width:800px){
+    .nav{
+        padding: 0;
+    }
+    .menu{
+        display: block;
+    }
+    .navList{
+        background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+        position: fixed;
+        top:60px;
+        right:0; 
+        width: 50%;
+        height: 50%;
+        background-color: var(--color-ter);
+        flex-direction: column;
+        box-shadow: -3px 3px 10px 1px rgb(0,0,0,.3);
+        clip-path: circle(0.3% at 100% 0);
+    }
+    .navList__item-a:active:after{
+        width: 100%;
+    }
+    .slider-btn:active{
+        background-color:rgb(255,255,255,.6); ;
+    }
+    .bottom:active{
+        background-color: var(--color-pri);
+        color:#fff;
+    }
+    .navListJs{
+        clip-path: circle(141.2% at 100% 0);
+    }
+    .title{
+        font-size: 25px;
+    }
+    .aboutContent{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        
+    }
+    .aboutFigure{
+        width: 100%;   
+    }
+    .aboutImg{
+        width: 200px;
+    }
+    .aboutText{
+        display: block;
+        text-align: center;
+        height:auto;
+    }
+    .o{
+        margin-top:20px;
+    }
+    .titles{
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    .titleBoys{
+        margin-bottom: 20px;
+    }
+    .boysContent__item{
+        margin-top:20px;
+    }
+}
+@media screen and (max-width:500px) {
+    .title{
+        font-size: 20px;
+    }
+    .heroFigure{
+        right: 50%;
+        margin-right: -50px; 
+    }
+    .title::after{
+        content: "";
+        width: 200px;
+     
+    }
+    .heroImg{
+        width: 100px;
+        height: 100px;
+    }
+    .aboutText__title{
+        font-size: 20px;
+    }
+    .aboutText__paragraph{
+        font-size: 15px;
+    }
+    .o{
+        font-size: 15px;
+    }
+    .boysImg{
+        width: 250px;
+        height: 250px;
+    }
+    .boysContent__item{
+        width: 250px;
+    }
+    .container-slider{
+        width: 250px;
+        height: 250px; 
+        margin: auto;
+    }
+    .slider{
+        width: 400%;
+    }
+    .slider__item{
+        width: 250px;
+        height: 250px;
+    }
+    .slider__item-img{
+        width: 250px;
+        height: 250px;
+    }
+    .bottom{
+        width: 150px;
+        height: 50px;
+    }
+    .bottom__item{
+        line-height: 40px;   
+        font-size: 15px; 
+    }
+    
+}
+@media screen and (max-width:400px){
+    .title{
+        font-size: 15px;
+    }
+    .heroText__subtitle{
+        font-size:14px;
+    }
+    .titles{
+        font-size: 25px;
+    }
+    .aboutText__title{
+        font-size: 15px;
+    }
+    .aboutText__paragraph{
+        font-size: 13px;
+    }
+    .o{
+        font-size: 13px;
+    }
+    .boysData__item{
+        font-size: 16px;
+    }
 }
